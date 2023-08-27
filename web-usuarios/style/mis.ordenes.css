@@ -1,0 +1,266 @@
+:root {
+    --white: #ffffff;
+    --black: #000;
+    --btn: #f7f7f7;
+    --v0: #cceae8;
+    --v1: #A8DCD9;
+    --v2: #68c3b7;
+    --v3: #539091;
+    --logo: #4EB79E;
+    --sm:14px;
+    --md:18px;
+    --lg:40px;
+  }
+
+  body{
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+  }
+
+
+  .menu{
+    display: none;
+  }
+
+  .logo{
+    width: 60px;
+    height: 60px;
+    align-items: center;
+  }
+
+  .navbar-left ul, .navbar-right ul{
+    list-style: none;
+    padding: 0;
+    margin-top: 0px;
+    display: flex;
+    align-items: center;
+    height: 60px;
+  }
+
+  nav{
+    display: flex;
+    padding: 0 24px;
+    justify-content: space-between;
+    height: 70px;
+    border-bottom: 1px solid var(--btn);
+  }
+
+  .navbar-left{
+    display: flex;
+  }
+
+  .navbar-left ul{
+    margin-left: 12px;
+  }
+
+  .navbar-left ul li a, .navbar-right ul li a{
+    text-decoration: none;
+    color: var(--v1);
+    border: 1px solid var(--white);
+    padding: 8px;
+    border-radius: 8px;
+  }
+
+  .navbar-left ul li a:hover, .navbar-right ul li a:hover{
+    border: 1px solid var(--logo);
+    color: var(--logo);
+  }
+
+  .navbar-email{
+    color: var(--btn);
+    font-size: var(--sm);
+    margin-right: 12px;
+  }
+
+  .navbar-shopping-cart{
+    position: relative;
+  }
+
+  .navbar-shopping-cart div{
+    width: 16px;
+    height: 16px;
+    background-color: var(--logo);
+    border-radius: 50%;
+    font-size: var(--sm);
+    font-weight: bold;
+    position: absolute;
+    top: -6px;
+    right: -3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cart{
+    font-size: 25px;
+  }
+
+
+
+
+  .my-order{
+    width: 100%;
+    height: 50vh;
+    display: grid;
+    place-items: center;
+  }
+
+  .tittle{
+    font-size: var(--lg);
+    margin-bottom: 5px;
+  }
+
+  .my-order-container{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    width: 300px;
+    display: flex;
+   
+  }
+
+  .my-order-content{
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    margin-top: -80px;
+  
+  }
+
+  .order{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 16px;
+    align-items: center;
+    margin-bottom: 24px;
+    display: flex;
+  }
+
+  .order p:nth-child(1){
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .order p span:nth-child(1){
+    font-size: var(--md);
+    font-weight: bold;
+  }
+
+  .order p span:nth-child(2){
+    font-size: var(-sm);
+    color: var(--v3);
+  }
+
+  .order p:nth-child(2){
+    text-align: end;
+    font-weight: bold;
+  }
+
+  .orden {
+    border: 1px solid #A8DCD9;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #f7f7f7;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .orden-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    flex-direction: column;
+  }
+  
+  .estado {
+    color: #4EB79E;
+    font-weight: bold;
+  }
+  
+  .orden-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .fecha,
+  .hora,
+  .precio {
+    color: #539091;
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .orden:hover {
+    background-color: #cceae8;
+    transition: background-color 0.3s;
+  }
+  
+  /* Estilos para la ventana modal de detalles */
+#ver-detalles-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.ver-detalles {
+  background-color: #cceae8;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+}
+
+.ver-detalles-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.ver-detalles-title {
+  color: #4EB79E;
+  font-size: 24px;
+}
+
+.close {
+  color: #539091;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.ver-detalles-body,
+.my-order-detail {
+  border-top: 1px solid #A8DCD9;
+  border-bottom: 1px solid #A8DCD9;
+  margin: 20px 0;
+  padding: 10px 0;
+}
+
+.ver-detalles-footer-buttons-cancelar {
+  background-color: #539091;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.ver-detalles-footer-buttons-cancelar:hover {
+  background-color: #4EB79E;
+  transition: background-color 0.3s;
+}
